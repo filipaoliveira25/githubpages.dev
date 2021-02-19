@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://filipaoliveira.pt/sitemap.xml
+Host: https://filipaoliveira.pt
