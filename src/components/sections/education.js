@@ -6,8 +6,8 @@ import { srConfig } from '@config';
 import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 
-const StyledJobsSection = styled.section`
-  max-width: 900px;
+const StyledEducationSection = styled.section`
+  max-width: 800px;
 
   .inner {
     display: flex;
@@ -153,19 +153,20 @@ const StyledTabContent = styled.div`
   }
 `;
 
-const Jobs = () => {
+const Education = () => {
   const data = useStaticQuery(graphql`
     query {
-      jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/jobs/" } }
+      education: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/education/" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
           node {
             frontmatter {
               title
+              subject
               company
-              company_abv
+              location
               range
               url
             }
@@ -176,7 +177,7 @@ const Jobs = () => {
     }
   `);
 
-  const jobsData = data.jobs.edges;
+  const educationData = data.education.edges;
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -219,14 +220,14 @@ const Jobs = () => {
   };
 
   return (
-    <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+    <StyledEducationSection id="education" ref={revealContainer}>
+      <h2 className="numbered-heading">Where I’ve Studied</h2>
 
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={onKeyDown}>
-          {jobsData &&
-            jobsData.map(({ node }, i) => {
-              const { company, company_abv } = node.frontmatter;
+          {educationData &&
+            educationData.map(({ node }, i) => {
+              const { subject } = node.frontmatter;
               return (
                 <li key={i}>
                   <StyledTabButton
@@ -238,7 +239,7 @@ const Jobs = () => {
                     aria-selected={activeTabId === i ? true : false}
                     aria-controls={`panel-${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}>
-                    <span>{company_abv || company}</span>
+                    <span>{subject}</span>
                   </StyledTabButton>
                 </li>
               );
@@ -246,8 +247,8 @@ const Jobs = () => {
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
 
-        {jobsData &&
-          jobsData.map(({ node }, i) => {
+        {educationData &&
+          educationData.map(({ node }, i) => {
             const { frontmatter, html } = node;
             const { title, url, company, range } = frontmatter;
 
@@ -278,8 +279,8 @@ const Jobs = () => {
             );
           })}
       </div>
-    </StyledJobsSection>
+    </StyledEducationSection>
   );
 };
 
-export default Jobs;
+export default Education;

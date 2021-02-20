@@ -56,13 +56,19 @@ const Hero = () => {
       and embrace new challenges.
     </p>
   );
-  const five = (
-    <a href={`mailto:${email}`} className="email-link">
-      Get In Touch
-    </a>
-  );
+  // const five = (
+  //   <a href={`mailto:${email}`} className="email-link">
+  //     Get In Touch
+  //   </a>
+  // );
 
-  const items = [one, two, three, four, five];
+  const items = [
+    one, 
+    two, 
+    three, 
+    four, 
+    // five
+  ];
 
   return (
     <StyledHeroSection>
