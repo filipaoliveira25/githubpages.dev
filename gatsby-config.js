@@ -3,8 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Filipa Oliveira',
-    description:
-      'Filipa is studies economics and business administration.',
+    description: 'Filipa is studies economics and business administration.',
     siteUrl: 'https://www.filipaoliveira.pt', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
@@ -43,13 +42,6 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `posts`,
-    //     path: `${__dirname}/content/posts`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
