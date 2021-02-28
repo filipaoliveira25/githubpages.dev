@@ -138,10 +138,10 @@ const About = () => {
     // 'Steve Jobs: The Exclusive Biography, by Walter Isaacson',
     {title: 'Steve Jobs', author: 'Walter Isaacson', link: 'https://www.goodreads.com/book/show/11084145-steve-jobs?from_search=true&from_srp=true&qid=7s2Vpvi13Y&rank=1'},
     // 'Never Split the Difference: Negotiating As If Your Life Depended On It, by Chris Voss',
-    {title: 'Never Split the Difference', author: 'Chris Voss', link: 'https://www.goodreads.com/book/show/26156469-never-split-the-difference?ac=1&from_search=true&qid=97eFnUHDyR&rank=1'},
+    // {title: 'Never Split the Difference', author: 'Chris Voss', link: 'https://www.goodreads.com/book/show/26156469-never-split-the-difference?ac=1&from_search=true&qid=97eFnUHDyR&rank=1'},
     // 'The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution, by Walter Isaacson',
     {title: 'The Innovators', author: 'Walter Isaacson', link: 'https://www.goodreads.com/book/show/21856367-the-innovators?ac=1&from_search=true&qid=EfVxVuOXfi&rank=2r'},
-    {title: 'Rich Dad Poor Dad', author: 'Robert T. Kiyosaki', link: 'https://www.goodreads.com/book/show/52037104-rich-dad-poor-dad?ac=1&from_search=true&qid=AoaTxW9goE&rank=5'},
+    // {title: 'Rich Dad Poor Dad', author: 'Robert T. Kiyosaki', link: 'https://www.goodreads.com/book/show/52037104-rich-dad-poor-dad?ac=1&from_search=true&qid=AoaTxW9goE&rank=5'},
   ];
     
   return (
